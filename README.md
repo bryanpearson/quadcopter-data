@@ -8,5 +8,5 @@ Currently flying:
 - Luminier 20A ESC
 - Naze32 acro with BorisB Betaflight firmware.
 
-# Flight Logs
+# Blackbox Logs
 Folder labels: `MM.DD.YY`
