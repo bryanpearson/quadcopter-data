@@ -43,7 +43,7 @@ set acc_hardware = 1 # OFF
 set gyro_lpf = 188 # 0=off, 188=recommended, 98, 42=max
 set gyro_cut_hz = 60
 set pterm_cut_hz = 40
-set dterm_cut_hz = 8
+set dterm_cut_hz = 12
 
 # THROTTLE-DROP SETUP - AUX1
 set min_check = 1010
@@ -65,25 +65,25 @@ set blackbox_device = 0
 
 # PIDS - QAV250 5045BN
 set pid_controller = 2
-set p_pitchf =  0.925
-set i_pitchf =  0.500
-set d_pitchf =  0.028
-set p_rollf =  0.425 # .500
+set p_pitchf =  0.940 # 0.925 DECENT
+set i_pitchf =  0.350 # 0.500 SETTINGS
+set d_pitchf =  0.025 # 0.028 HERE
+set p_rollf =  0.525
 set i_rollf =  0.400
-set d_rollf =  0.025
-set p_yawf =  3.000
-set i_yawf =  0.900
+set d_rollf =  0.018
+set p_yawf =  2.900
+set i_yawf =  0.800
 set d_yawf =  0.012
 
 
 # RATE PROFILES
 set rc_rate = 100
-set rc_expo = 80
+set rc_expo = 77
 set rc_yaw_expo = 25
 set thr_mid = 50
 set thr_expo = 0
 set roll_rate = 50
 set pitch_rate = 50
-set yaw_rate = 38
-set tpa_rate = 40
-set tpa_breakpoint = 1450 # 1480
+set yaw_rate = 40
+set tpa_rate = 0
+set tpa_breakpoint = 1500

@@ -1,0 +1,36 @@
+09.06.15 Notes
+
+
+238: D 25, major oscillations
+239: D 12, no osc, wasn't doing enough compared to P
+240: D 14, minor osc, lowered P tiny bit to see
+241: 56, 12, 12: one big overcorrect
+242: 57, 15, 13: no osc, smaller solid overcorrect
+243: 57, 15, 15: osc, overcorrect ok tho
+244: 55, 15, 14: mid-throttle osc, overcorrect decent, one large
+245: 53, 15, 14: almost no osc, but overshoot back to one large. Ugh
+246: 60, 10, 10: major osc. one major overshoot
+247: 60, 20, 10: same bad osc, major overshoot
+248: 40, 20, 10: no osc, major overshoot, lasts very long, drifts almost
+249: 40, 20, 14: minor high-t osc, one deep long overshoot
+249: 45, 20, 12: minor high-t osc, one deep long overshoot
+numbering got off. corrected now
+250: 45, 20, 12: minor high-t osc, one deep long overshoot
+251: 50, 20, 05: no osc
+252: 70, 20, 05: osc major
+253: 60, 20, 05: osc some
+254: 50, 20, 05: osc little, high throttle and drop
+255: 40, 20, 05: 1600+ throttle osc, overshoot everything, prob not enough D
+256: 40, 20, 10: same ^
+257: 40, 20, 14: high throttle osc, long overshoot still
+258: 37, 20, 14: same, just slower to respond :( struggling badly here
+
+Going to start with default PIDs for BetaFlight, see where that leads me. expecting crap, major osc, unflyable
+
+259: 150, 40, 30: couldn't take off it was shaking so badly
+260: 80, 40, 30: could take off, but unflyable really
+261: 70, 40, 20: bad osc. deep single overshoot 
+262: dead batt, bad data
+263: 60, 40, 17: bad osc. deep, less long, but still long-ish overshoot
+264: 55, 40, 14: minor osc, overshoot with osc inside
+265: 525, 40, 18: osc after rolls, overshoot still there. close as I can get I suppose.
