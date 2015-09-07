@@ -1,5 +1,8 @@
 09.06.15 Notes
+Tested roll settings only below. Pitch very locked in, no changes needed.
 
+Key:
+FLIGHTLOG: ROLL_P, ROLL_I, ROLL_D: DESCRIPTION
 
 238: D 25, major oscillations
 239: D 12, no osc, wasn't doing enough compared to P
