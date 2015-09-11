@@ -1,0 +1,91 @@
+# Base settings, fresh firmware flash
+
+# FEATURE
+feature -RX_PPM
+feature -VBAT
+feature -INFLIGHT_ACC_CAL
+feature -RX_SERIAL
+feature -MOTOR_STOP
+feature -SERVO_TILT
+feature -SOFTSERIAL
+feature -GPS
+feature -FAILSAFE
+feature -SONAR
+feature -TELEMETRY
+feature -CURRENT_METER
+feature -3D
+feature -RX_PARALLEL_PWM
+feature -RX_MSP
+feature -RSSI_ADC
+feature -LED_STRIP
+feature -DISPLAY
+feature -ONESHOT125
+feature -BLACKBOX
+feature -CHANNEL_FORWARDING
+feature VBAT
+feature FAILSAFE
+feature RX_PARALLEL_PWM
+feature ONESHOT125
+feature BLACKBOX
+
+
+# CHANNEL MAP
+map TAER1234
+
+
+# MAIN CONFIGS
+set looptime = 0
+set sync_gyro_to_loop = 1
+set rc_smoothing = 1
+set pid_at_min_throttle = 1 # ON
+set acc_hardware = 1 # OFF
+set gyro_lpf = 188 # 0=off, 188=minimum, 98, 42=max
+set gyro_cut_hz = 60
+set pterm_cut_hz = 40
+set dterm_cut_hz = 11
+
+set min_check = 1100
+set max_check = 1900
+set min_throttle = 1080
+set max_throttle = 1850
+set min_command = 1000
+
+set vbat_min_cell_voltage = 34
+set vbat_warning_cell_voltage = 35
+
+set align_board_roll = -10
+set align_board_yaw = 90
+
+set blackbox_rate_num = 1
+set blackbox_rate_denom = 2
+set blackbox_device = 0
+
+
+# BEEPER / ARMING
+aux 0 0 0 1650 2000
+aux 1 12 0 1300 1575
+
+
+# PIDS
+set pid_controller = 2
+set p_pitchf =  0.850
+set i_pitchf =  0.350
+set d_pitchf =  0.030
+set p_rollf =  0.500
+set i_rollf =  0.400
+set d_rollf =  0.020
+set p_yawf =  3.000
+set i_yawf =  1.000
+set d_yawf =  0.005
+
+
+# RATE PROFILES
+rateprofile 0
+set rc_rate = 100
+set rc_expo = 75
+set rc_yaw_expo = 15
+set thr_mid = 50
+set thr_expo = 0
+set roll_rate = 50
+set pitch_rate = 50
+set yaw_rate = 35

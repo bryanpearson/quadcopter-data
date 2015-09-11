@@ -1,0 +1,77 @@
+09.07.15 Notes
+Less filtering. Trying to get PIDs dialed in again.
+
+
+LOG 268: 
+Pitch: Overshoot and osc. need lower P
+1.2, 55, 12
+Roll: Overshoot and osc. need lower P
+0.8, 45, 12
+
+
+
+LOG 269: Lowered I, starting from scratch.
+Pitch: slight osc after command
+1.2, 20, 12
+Roll: more pronounced osc after command and at higher throttle
+0.7, 20, 12
+
+
+# DTERM_CUT_HZ to 18, LESS FILTERING
+
+LOG 270: Adding in D. BETTER!
+Pitch: no osc, overshoot better, but still present
+1.2, 20, 20
+Roll: slight osc after command
+0.65, 20, 20
+
+
+LOG 271:
+Pitch: GOOOOOOOOD!
+1.2, 20, 30
+Roll: very slight osc after commands
+0.60, 20, 20
+
+
+LOG 272:
+Pitch: HOLY BALLS, PITCH IS DONE! Might need more Iterm though
+1.2, 20, 35
+Roll: slight long overshoot. very slight osc. might need more D?
+0.55, 20, 22
+
+
+LOG 273:
+Pitch: Way more osc. Large overshoot. Iterm did something. Changing back.
+1.2, 30, 35
+Roll: Lots more osc. D has to be creating it.
+0.525, 20, 25
+
+
+LOG 274:
+Pitch: Back to being awesome.
+1.2, 20, 35
+Roll:
+0.55, 20, 15
+
+
+LOG 275:
+Pitch:
+1.2, 20, 35
+Roll:
+0.525, 15, 18
+
+
+
+LOG 276:
+Pitch: Good stuff here
+1.15, 20, 35
+Roll: Still osc at any throttle above 1450, but overshoot from commands is great!
+0.5, 15, 19
+
+277, 278, 279, actual full-battery flights.
+
+
+
+
+
+

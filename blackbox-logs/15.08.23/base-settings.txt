@@ -1,0 +1,109 @@
+# Base settings, fresh firmware flash
+
+# mixer
+mixer custom
+mmix reset
+mmix 0 1.000 -1.000 0.777 -1.000
+mmix 1 1.000 -1.000 -0.777 1.000
+mmix 2 1.000 1.000 0.777 1.000
+mmix 3 1.000 1.000 -0.777 -1.000
+
+
+# feature
+feature -RX_PPM
+feature -VBAT
+feature -INFLIGHT_ACC_CAL
+feature -RX_SERIAL
+feature -MOTOR_STOP
+feature -SERVO_TILT
+feature -SOFTSERIAL
+feature -GPS
+feature -FAILSAFE
+feature -SONAR
+feature -TELEMETRY
+feature -CURRENT_METER
+feature -3D
+feature -RX_PARALLEL_PWM
+feature -RX_MSP
+feature -RSSI_ADC
+feature -LED_STRIP
+feature -DISPLAY
+feature -ONESHOT125
+feature -BLACKBOX
+feature -CHANNEL_FORWARDING
+feature VBAT
+feature FAILSAFE
+feature RX_PARALLEL_PWM
+feature ONESHOT125
+feature BLACKBOX
+
+
+# map
+map TAER1234
+
+
+# main configs
+set looptime = 0 # FASTESTER
+set rc_smoothing = 1
+set pid_at_min_throttle = 1 # ON
+set acc_hardware = 1 # OFF
+set gyro_lpf = 188 # 0=off, 188=minimum, 98, 42=max
+set gyro_cut_hz = 45
+set pterm_cut_hz = 40
+set dterm_cut_hz = 7
+
+set min_check = 1100
+set max_check = 1900
+set min_throttle = 1080
+set max_throttle = 1850
+set min_command = 1000
+
+set vbat_min_cell_voltage = 34
+set vbat_warning_cell_voltage = 35
+
+set align_board_roll = -10
+set align_board_yaw = 90
+
+set blackbox_rate_num = 1
+set blackbox_rate_denom = 2
+set blackbox_device = 0
+
+
+# beeper / arming
+aux 0 0 0 1650 2000
+aux 1 12 0 1300 1575
+
+
+# pid
+set pid_controller = 2
+set p_pitch = 40
+set i_pitch = 25
+set d_pitch = 15
+set p_roll = 40
+set i_roll = 25
+set d_roll = 15
+set p_yaw = 100
+set i_yaw = 45
+set d_yaw = 0
+
+set p_pitchf =  1.100
+set i_pitchf =  0.550
+set d_pitchf =  0.030
+set p_rollf =  0.525
+set i_rollf =  0.400
+set d_rollf =  0.022
+set p_yawf =  3.900
+set i_yawf =  1.000
+set d_yawf =  0.005
+
+
+# rateprofile
+rateprofile 0
+set rc_rate = 100
+set rc_expo = 75
+set rc_yaw_expo = 15
+set thr_mid = 50
+set thr_expo = 0
+set roll_rate = 50
+set pitch_rate = 50
+set yaw_rate = 35
