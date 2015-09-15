@@ -64,12 +64,12 @@ set blackbox_device = 0
 
 # PIDS - QAV250 5045BN
 set pid_controller = 2
-set p_pitchf =  0.750
+set p_pitchf =  0.800
 set i_pitchf =  0.300
-set d_pitchf =  0.014
-set p_rollf =  0.440
+set d_pitchf =  0.015
+set p_rollf =  0.500
 set i_rollf =  0.200
-set d_rollf =  0.009
+set d_rollf =  0.010
 set p_yawf =  2.500
 set i_yawf =  1.000
 set d_yawf =  0.000
