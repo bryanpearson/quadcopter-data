@@ -77,8 +77,8 @@ set d_yawf =  0.005
 
 # RATE PROFILES
 set rc_rate = 100
-set rc_expo = 80
-set rc_yaw_expo = 40
+set rc_expo = 82
+set rc_yaw_expo = 55
 set thr_mid = 50
 set thr_expo = 0
 set roll_rate = 54
