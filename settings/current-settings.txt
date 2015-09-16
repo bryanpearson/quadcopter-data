@@ -43,7 +43,7 @@ set acc_hardware = 1 # OFF
 set gyro_lpf = 188 # 0=off, 188=recommended, 98, 42=max
 set gyro_cut_hz = 80
 set pterm_cut_hz = 50
-set dterm_cut_hz = 15
+set dterm_cut_hz = 16
 
 # THROTTLE-DROP SETUP - AUX1
 set min_check = 1010
