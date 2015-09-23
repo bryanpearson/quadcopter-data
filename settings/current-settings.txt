@@ -1,27 +1,6 @@
 # Base settings, fresh firmware flash
 
 # FEATURE
-feature -RX_PPM
-feature -VBAT
-feature -INFLIGHT_ACC_CAL
-feature -RX_SERIAL
-feature -MOTOR_STOP
-feature -SERVO_TILT
-feature -SOFTSERIAL
-feature -GPS
-feature -FAILSAFE
-feature -SONAR
-feature -TELEMETRY
-feature -CURRENT_METER
-feature -3D
-feature -RX_PARALLEL_PWM
-feature -RX_MSP
-feature -RSSI_ADC
-feature -LED_STRIP
-feature -DISPLAY
-feature -ONESHOT125
-feature -BLACKBOX
-feature -CHANNEL_FORWARDING
 feature VBAT
 feature MOTOR_STOP
 feature FAILSAFE
@@ -35,21 +14,16 @@ map TAER1234
 
 
 # MAIN CONFIGS
-set looptime = 0
-set sync_gyro_to_loop = 1
-set rc_smoothing = 1
 set pid_at_min_throttle = 1 # ON
 set acc_hardware = 1 # OFF
-set gyro_lpf = 188 # 0=off, 188=recommended, 98, 42=max
-set gyro_cut_hz = 80
-set pterm_cut_hz = 50
-set dterm_cut_hz = 16
+set dterm_cut_hz = 30
+
 
 # THROTTLE-DROP SETUP - AUX1
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1084
+set min_throttle = 1094
 set max_throttle = 1864
 
 set vbat_min_cell_voltage = 34
@@ -58,31 +32,31 @@ set vbat_warning_cell_voltage = 35
 set align_board_yaw = 90
 
 set blackbox_rate_num = 1
-set blackbox_rate_denom = 2
+set blackbox_rate_denom = 1
 set blackbox_device = 0
 
 
 # PIDS - QAV250 5045BN
 set pid_controller = 2
-set p_pitchf =  0.775
-set i_pitchf =  0.350
-set d_pitchf =  0.015
-set p_rollf =  0.475
-set i_rollf =  0.250
-set d_rollf =  0.010
-set p_yawf =  2.500
-set i_yawf =  1.000
-set d_yawf =  0.005
+set p_pitchf =  1.500
+set i_pitchf =  0.400
+set d_pitchf =  0.030
+set p_rollf =  1.500
+set i_rollf =  0.400
+set d_rollf =  0.030
+set p_yawf =  3.500
+set i_yawf =  0.900
+set d_yawf =  0.000
 
 
 # RATE PROFILES
 set rc_rate = 100
-set rc_expo = 78
-set rc_yaw_expo = 45
+set rc_expo = 70
+set rc_yaw_expo = 30
 set thr_mid = 50
 set thr_expo = 0
 set roll_rate = 50
 set pitch_rate = 50
-set yaw_rate = 50
-set tpa_rate = 42
+set yaw_rate = 30
+set tpa_rate = 0
 set tpa_breakpoint = 1440
