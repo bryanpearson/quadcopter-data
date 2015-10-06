@@ -23,8 +23,8 @@ set dterm_cut_hz = 33
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1094
-set max_throttle = 1864
+set min_throttle = 1080
+set max_throttle = 2000
 
 set vbat_min_cell_voltage = 34
 set vbat_warning_cell_voltage = 35
