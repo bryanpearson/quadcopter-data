@@ -44,9 +44,9 @@ set d_pitchf =  0.019
 set p_rollf =  0.830
 set i_rollf =  0.330
 set d_rollf =  0.013
-set p_yawf =  3.000
-set i_yawf =  0.900
-set d_yawf =  0.010
+set p_yawf =  2.800
+set i_yawf =  0.750
+set d_yawf =  0.005
 
 
 # RATE PROFILES
