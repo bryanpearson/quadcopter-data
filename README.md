@@ -10,3 +10,7 @@ Currently flying:
 
 # Blackbox Logs
 Folder labels: `MM.DD.YY`
+
+## Common commands
+Flashing the Motolabs Tornado with a .bin file:
+`/opt/local/bin/dfu-util -s 0x08000000 -a 0 -d 0483:df11 -D ~/Github/public-projects/quadcopter-data/betaflight/betaflight_MOTOLAB.bin`
