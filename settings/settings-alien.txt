@@ -3,9 +3,9 @@
 # FEATURE
 feature VBAT
 feature FAILSAFE
-feature RX_PARALLEL_PWM
 feature ONESHOT125
 feature TELEMETRY
+feature LED_STRIP
 # feature BLACKBOX
 
 
@@ -61,17 +61,25 @@ led 31 0,0:::0
 map TAER1234
 
 
+# RXFAIL
+rxfail 0 h
+rxfail 1 h
+rxfail 2 h
+rxfail 3 h
+set failsafe_delay = 5
+set failsafe_off_delay = 0
+
+
 # MAIN CONFIGS
-set pid_at_min_throttle = 1 # ON
+set pid_at_min_throttle = 5 # ON, Iterm active for 5 seconds
 set acc_hardware = 1 # OFF
-set dterm_cut_hz = 40
 
 
 # THROTTLE-DROP SETUP - AUX1
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1080
+set min_throttle = 1050
 set max_throttle = 2000
 
 set vbat_min_cell_voltage = 33
@@ -83,7 +91,16 @@ set blackbox_device = 0
 
 
 # PIDS - 5" Alien
-#####################
+set pid_controller = 2
+set p_pitchf =  1.500
+set i_pitchf =  0.400
+set d_pitchf =  0.020
+set p_rollf =  1.500
+set i_rollf =  0.400
+set d_rollf =  0.020
+set p_yawf =  3.900
+set i_yawf =  0.900
+set d_yawf =  0.005
 
 
 # RATE PROFILES
