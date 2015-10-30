@@ -2,11 +2,33 @@
 
 # FEATURE
 feature VBAT
-feature MOTOR_STOP
+# feature MOTOR_STOP # spin motors when armed
 feature FAILSAFE
 feature RX_PARALLEL_PWM
 feature ONESHOT125
 feature BLACKBOX
+
+
+# MOTOR MIX (SOMA APPROVED)
+mixer CUSTOM
+mmix reset
+mmix 0 1.000 -1.000 0.750 -1.000
+mmix 1 1.000 -1.000 -0.750 1.000
+mmix 2 1.000 1.000 0.750 1.000
+mmix 3 1.000 1.000 -0.750 -1.000
+
+
+# LED RING
+led 0 7,10::R:2
+led 1 5,9::R:3
+led 2 4,7::R:2
+led 3 5,5::R:3
+led 4 7,4::R:2
+led 5 9,5::R:3
+led 6 10,7::R:2
+led 7 9,9::R:3
+led 8 7,8::C:10
+led 9 7,6::C:10
 
 
 # CHANNEL MAP
