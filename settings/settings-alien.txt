@@ -13,15 +13,6 @@ feature LED_STRIP
 set telemetry_inversion = 1
 
 
-# MOTOR MIX (SOMA APPROVED)
-mixer CUSTOM
-mmix reset
-mmix 0 1.000 -1.000 0.750 -1.000
-mmix 1 1.000 -1.000 -0.750 1.000
-mmix 2 1.000 1.000 0.750 1.000
-mmix 3 1.000 1.000 -0.750 -1.000
-
-
 # CHANNEL MAP
 map TAER1234
 
