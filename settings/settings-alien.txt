@@ -1,23 +1,47 @@
 # Base settings, fresh firmware flash
+# BetaFlight 2.1.5 compatible
 
 # FEATURE
+feature -RX_PPM
+feature -VBAT
+feature -INFLIGHT_ACC_CAL
+feature -RX_SERIAL
+feature -MOTOR_STOP
+feature -SERVO_TILT
+feature -SOFTSERIAL
+feature -GPS
+feature -FAILSAFE
+feature -SONAR
+feature -TELEMETRY
+feature -CURRENT_METER
+feature -3D
+feature -RX_PARALLEL_PWM
+feature -RX_MSP
+feature -RSSI_ADC
+feature -LED_STRIP
+feature -DISPLAY
+feature -ONESHOT125
+feature -BLACKBOX
+feature -CHANNEL_FORWARDING
 feature VBAT
+feature RX_SERIAL
 feature FAILSAFE
-feature ONESHOT125
 feature TELEMETRY
 feature LED_STRIP
-# feature BLACKBOX
+feature ONESHOT125
+feature BLACKBOX
 
 
 # TELEMETRY SETUP
-set telemetry_inversion = 1
+set telemetry_inversion = ON
 
 
 # CHANNEL MAP
 map TAER1234
 
 
-# RXFAIL
+# RX / FAILSAFE
+set serialrx_provider = SBUS
 rxfail 0 h
 rxfail 1 h
 rxfail 2 h
@@ -27,15 +51,16 @@ set failsafe_off_delay = 0
 
 
 # MAIN CONFIGS
-set pid_at_min_throttle = 5 # ON, Iterm active for 5 seconds
+set pid_at_min_throttle = PID # Iterm active for 5 seconds
 set acc_hardware = 1 # OFF
+set yaw_jump_prevention_limit = 300
 
 
 # THROTTLE SETUP - AUX1
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1050
+set min_throttle = 1075
 set max_throttle = 2000
 
 set vbat_min_cell_voltage = 33
@@ -43,30 +68,30 @@ set vbat_warning_cell_voltage = 35
 
 set blackbox_rate_num = 1
 set blackbox_rate_denom = 1
-set blackbox_device = 0
+set blackbox_device = SERIAL
 
 
 # PIDS - 5" Alien
-set pid_controller = 2
-set p_pitchf =  1.500
-set i_pitchf =  0.400
-set d_pitchf =  0.020
-set p_rollf =  1.500
-set i_rollf =  0.400
-set d_rollf =  0.020
-set p_yawf =  3.900
-set i_yawf =  0.900
-set d_yawf =  0.005
+set pid_controller = LUX
+set p_pitchf =  1.100
+set i_pitchf =  0.500
+set d_pitchf =  0.018
+set p_rollf =  0.750
+set i_rollf =  0.500
+set d_rollf =  0.014
+set p_yawf =  2.000
+set i_yawf =  0.400
+set d_yawf =  0.007
 
 
 # RATE PROFILES
 set rc_rate = 100
-set rc_expo = 72
-set rc_yaw_expo = 40
+set rc_expo = 73
+set rc_yaw_expo = 41
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 55
-set pitch_rate = 55
+set roll_rate = 59
+set pitch_rate = 59
 set yaw_rate = 55
 set tpa_rate = 0
 set tpa_breakpoint = 1500
