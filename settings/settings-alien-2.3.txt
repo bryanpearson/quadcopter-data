@@ -1,0 +1,99 @@
+# Base settings, fresh firmware flash
+# BetaFlight 2.3 compatible
+
+
+# FEATURE
+feature -RX_PPM
+feature -VBAT
+feature -INFLIGHT_ACC_CAL
+feature -RX_SERIAL
+feature -MOTOR_STOP
+feature -SERVO_TILT
+feature -SOFTSERIAL
+feature -GPS
+feature -FAILSAFE
+feature -SONAR
+feature -TELEMETRY
+feature -CURRENT_METER
+feature -3D
+feature -RX_PARALLEL_PWM
+feature -RX_MSP
+feature -RSSI_ADC
+feature -LED_STRIP
+feature -DISPLAY
+feature -ONESHOT125
+feature -BLACKBOX
+feature -CHANNEL_FORWARDING
+feature VBAT
+feature RX_SERIAL
+feature FAILSAFE
+feature TELEMETRY
+feature LED_STRIP
+feature ONESHOT125
+feature BLACKBOX
+
+
+# CHANNEL MAP
+map TAER1234
+
+# enable 2kHz mode
+set gyro_lpf = OFF
+
+
+# RX / FAILSAFE
+set serialrx_provider = SBUS
+rxfail 0 h
+rxfail 1 h
+rxfail 2 h
+rxfail 3 h
+set failsafe_delay = 5
+set failsafe_off_delay = 0
+
+
+# MAIN CONFIGS
+# set acc_hardware = 1 # OFF
+# set yaw_jump_prevention_limit = 300
+set blackbox_rate_denom = 3
+
+# THROTTLE SETUP - AUX1
+set min_check = 1010
+set max_check = 1900
+set min_command = 1000
+set min_throttle = 1075
+set max_throttle = 2000
+
+
+# PIDS - 5" Alien
+set pid_controller = MWREWRITE
+set p_pitch = 32
+set i_pitch = 29
+set d_pitch = 13
+set p_roll = 29
+set i_roll = 30
+set d_roll = 13
+set p_yaw = 60
+set i_yaw = 35
+set d_yaw = 2
+
+# STOCK REWRITE PIDS
+# set p_pitch = 50
+# set i_pitch = 30
+# set d_pitch = 20
+# set p_roll = 40
+# set i_roll = 30
+# set d_roll = 13
+# set p_yaw = 100
+# set i_yaw = 50
+# set d_yaw = 5
+
+# RATE PROFILES
+set rc_rate = 100
+set rc_expo = 70
+set rc_yaw_expo = 20
+set thr_mid = 50
+set thr_expo = 0
+set roll_rate = 70
+set pitch_rate = 72
+set yaw_rate = 100
+set tpa_rate = 0
+set tpa_breakpoint = 1500
