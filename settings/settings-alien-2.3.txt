@@ -36,6 +36,19 @@ feature BLACKBOX
 # CHANNEL MAP
 map TAER1234
 
+
+# serial
+serial 20 1 115200 57600 0 115200
+serial 0 128 115200 57600 0 250000
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+
+# aux
+aux 0 0 0 950 1550
+aux 1 27 0 900 2100
+
+
 # enable 2kHz mode
 set gyro_lpf = OFF
 
@@ -59,20 +72,19 @@ set blackbox_rate_denom = 3
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1075
+set min_throttle = 1040
 set max_throttle = 2000
 
 
-# PIDS - 5" Alien
 set pid_controller = MWREWRITE
-set p_pitch = 32
-set i_pitch = 29
-set d_pitch = 13
-set p_roll = 29
-set i_roll = 30
-set d_roll = 13
-set p_yaw = 60
-set i_yaw = 35
+set p_pitch = 38
+set i_pitch = 23
+set d_pitch = 15
+set p_roll = 34
+set i_roll = 26
+set d_roll = 16
+set p_yaw = 80
+set i_yaw = 40
 set d_yaw = 2
 
 # STOCK REWRITE PIDS
@@ -86,14 +98,13 @@ set d_yaw = 2
 # set i_yaw = 50
 # set d_yaw = 5
 
-# RATE PROFILES
 set rc_rate = 100
 set rc_expo = 70
 set rc_yaw_expo = 20
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 70
-set pitch_rate = 72
-set yaw_rate = 100
-set tpa_rate = 0
-set tpa_breakpoint = 1500
+set roll_rate = 76
+set pitch_rate = 76
+set yaw_rate = 115
+set tpa_rate = 8
+set tpa_breakpoint = 1650
