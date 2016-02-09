@@ -76,16 +76,17 @@ set min_throttle = 1040
 set max_throttle = 2000
 
 
-set pid_controller = MWREWRITE
-set p_pitch = 39
-set i_pitch = 25
-set d_pitch = 16
-set p_roll = 35
-set i_roll = 26
-set d_roll = 16
-set p_yaw = 80
-set i_yaw = 38
-set d_yaw = 2
+
+# Decent Tune - Mid Jan '16
+# set p_pitch = 36
+# set i_pitch = 23
+# set d_pitch = 14
+# set p_roll = 34
+# set i_roll = 23
+# set d_roll = 14
+# set p_yaw = 65
+# set i_yaw = 33
+# set d_yaw = 1
 
 # STOCK REWRITE PIDS
 # set p_pitch = 50
@@ -98,13 +99,26 @@ set d_yaw = 2
 # set i_yaw = 50
 # set d_yaw = 5
 
+
+
+set pid_controller = MWREWRITE
+set p_pitch = 39
+set i_pitch = 25
+set d_pitch = 16
+set p_roll = 35
+set i_roll = 26
+set d_roll = 16
+set p_yaw = 80
+set i_yaw = 38
+set d_yaw = 2
+
 set rc_rate = 100
 set rc_expo = 70
 set rc_yaw_expo = 20
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 76
-set pitch_rate = 76
+set roll_rate = 77
+set pitch_rate = 77
 set yaw_rate = 116
 set tpa_rate = 8
 set tpa_breakpoint = 1650
