@@ -1,5 +1,5 @@
 # Base settings, fresh firmware flash
-# BetaFlight 2.3 compatible
+# BetaFlight 2.4.1 compatible
 
 
 # FEATURE
