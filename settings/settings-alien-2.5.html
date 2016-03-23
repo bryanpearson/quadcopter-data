@@ -1,0 +1,143 @@
+# Base settings, fresh firmware flash
+# BetaFlight 2.5.3 compatible
+
+
+# FEATURE
+feature -RX_PPM
+feature -VBAT
+feature -INFLIGHT_ACC_CAL
+feature -RX_SERIAL
+feature -MOTOR_STOP
+feature -SERVO_TILT
+feature -SOFTSERIAL
+feature -GPS
+feature -FAILSAFE
+feature -SONAR
+feature -TELEMETRY
+feature -CURRENT_METER
+feature -3D
+feature -RX_PARALLEL_PWM
+feature -RX_MSP
+feature -RSSI_ADC
+feature -LED_STRIP
+feature -DISPLAY
+feature -ONESHOT125
+feature -BLACKBOX
+feature -CHANNEL_FORWARDING
+feature VBAT
+feature RX_SERIAL
+feature FAILSAFE
+feature TELEMETRY
+feature LED_STRIP
+feature ONESHOT125
+feature BLACKBOX
+
+
+# LED
+led 0 7,10::R:2
+led 1 5,9::R:3
+led 2 4,7::R:2
+led 3 5,5::R:3
+led 4 7,4::R:2
+led 5 9,5::R:3
+led 6 10,7::R:2
+led 7 9,9::R:3
+led 8 7,8::C:10
+led 9 7,6::C:10
+led 10 0,0:::0
+led 11 0,0:::0
+led 12 0,0:::0
+led 13 0,0:::0
+led 14 0,0:::0
+led 15 0,0:::0
+led 16 0,0:::0
+led 17 0,0:::0
+led 18 0,0:::0
+led 19 0,0:::0
+led 20 0,0:::0
+led 21 0,0:::0
+led 22 0,0:::0
+led 23 0,0:::0
+led 24 0,0:::0
+led 25 0,0:::0
+led 26 0,0:::0
+led 27 0,0:::0
+led 28 0,0:::0
+led 29 0,0:::0
+led 30 0,0:::0
+led 31 0,0:::0
+
+
+# CHANNEL MAP
+map TAER1234
+
+
+# serial
+serial 20 1 115200 57600 0 115200
+serial 0 128 115200 57600 0 250000
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+
+# aux
+aux 0 0 0 950 1550
+aux 1 27 0 950 2050
+
+
+# RX
+set serialrx_provider = SBUS
+
+
+# FAILSAFE
+rxfail 0 h
+rxfail 1 h
+rxfail 2 h
+rxfail 3 h
+set failsafe_delay = 10
+set failsafe_off_delay = 0
+
+
+# MAIN CONFIGS
+set blackbox_rate_denom = 3
+
+# THROTTLE SETUP - AUX1
+set min_check = 1010
+set max_check = 1900
+set min_command = 1000
+set min_throttle = 1040
+set max_throttle = 2000
+
+
+# PID TUNING
+set p_pitch = 46
+set i_pitch = 38
+set d_pitch = 14
+set p_roll = 37
+set i_roll = 36
+set d_roll = 12
+set p_yaw = 80
+set i_yaw = 45
+set d_yaw = 1
+
+# STOCK REWRITE PIDS
+# set p_pitch = 54
+# set i_pitch = 40
+# set d_pitch = 22
+# set p_roll = 42
+# set i_roll = 40
+# set d_roll = 18
+# set p_yaw = 90
+# set i_yaw = 50
+# set d_yaw = 0
+
+
+set rc_rate = 100
+set rc_expo = 70
+set rc_yaw_expo = 20
+set thr_mid = 50
+set thr_expo = 0
+set roll_rate = 79
+set pitch_rate = 79
+set yaw_rate = 130
+set tpa_rate = 0
+set tpa_breakpoint = 1650

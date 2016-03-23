@@ -112,15 +112,15 @@ set max_throttle = 2000
 
 
 # Tune
-set p_pitch = 54
-set i_pitch = 40
-set d_pitch = 18
-set p_roll = 42
-set i_roll = 40
-set d_roll = 13
-set p_yaw = 90
-set i_yaw = 50
-set d_yaw = 0
+set p_pitch = 46
+set i_pitch = 38
+set d_pitch = 14
+set p_roll = 37
+set i_roll = 36
+set d_roll = 12
+set p_yaw = 80
+set i_yaw = 45
+set d_yaw = 1
 
 # STOCK REWRITE PIDS
 # set p_pitch = 54
@@ -135,12 +135,12 @@ set d_yaw = 0
 
 
 set rc_rate = 100
-set rc_expo = 70
+set rc_expo = 60
 set rc_yaw_expo = 20
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 77
-set pitch_rate = 77
-set yaw_rate = 125
+set roll_rate = 79
+set pitch_rate = 79
+set yaw_rate = 130
 set tpa_rate = 0
 set tpa_breakpoint = 1650
