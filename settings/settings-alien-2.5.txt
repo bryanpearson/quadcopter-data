@@ -98,7 +98,7 @@ set failsafe_off_delay = 0
 
 
 # MAIN CONFIGS
-set blackbox_rate_denom = 4
+set blackbox_rate_denom = 6
 
 # THROTTLE SETUP - AUX1
 set min_check = 1010
@@ -109,13 +109,13 @@ set max_throttle = 2000
 
 
 # PID TUNING
-set p_pitch = 42
-set i_pitch = 36
-set d_pitch = 16
-set p_roll = 34
-set i_roll = 34
-set d_roll = 14
-set p_yaw = 80
+set p_pitch = 34
+set i_pitch = 27
+set d_pitch = 22
+set p_roll = 30
+set i_roll = 25
+set d_roll = 19
+set p_yaw = 70
 set i_yaw = 45
 set d_yaw = 1
 
@@ -132,12 +132,12 @@ set d_yaw = 1
 
 
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_expo = 72
+set rc_yaw_expo = 21
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 79
-set pitch_rate = 79
-set yaw_rate = 130
+set roll_rate = 80
+set pitch_rate = 80
+set yaw_rate = 136
 set tpa_rate = 0
 set tpa_breakpoint = 1650
