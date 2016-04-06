@@ -102,21 +102,21 @@ set blackbox_rate_denom = 4
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1030
+set min_throttle = 1033
 set max_throttle = 2000
 
 
 
 # PID TUNING
 set pid_controller = MWREWRITE
-set p_pitch = 41
+set p_pitch = 40
 set i_pitch = 26
-set d_pitch = 23
-set p_roll = 42
+set d_pitch = 25
+set p_roll = 41
 set i_roll = 26
-set d_roll = 22
-set p_yaw = 75
-set i_yaw = 38
+set d_roll = 24
+set p_yaw = 70
+set i_yaw = 36
 set d_yaw = 0
 
 
@@ -139,6 +139,6 @@ set thr_mid = 50
 set thr_expo = 0
 set roll_rate = 60
 set pitch_rate = 60
-set yaw_rate = 64
+set yaw_rate = 68
 set tpa_rate = 0
 set tpa_breakpoint = 1500
