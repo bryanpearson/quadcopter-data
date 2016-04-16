@@ -1,0 +1,24 @@
+Step4: Download the Latest Kiss FW from Flyduino & Unzip in downloads folder
+
+Flyduino Website: http://flyduino.net/KISS-FC-32bit-Fli...
+RC Groups Kiss FC Thread http://www.rcgroups.com/forums/showth...
+
+Step5: Change Directory to Location of the FW File
+
+cd ~/Downloads/ +DRAG_FOLDER to Terminal
+
+Step6: Short Bootloader Pads Or Press and Hold Button if V1.03 or Greater
+
+Step7: Unlock the EEPROM 
+
+dfu-util --alt 0 -s 0x08000000:force:unprotect -D KISSFC_VXXXXXXX.dfu fu-util 0.8
+
+Step8: Flash Firmware (Press and Hold Boot Button)
+
+dfu-util -R -a 0 -D KISSFC_VXXXXXXX.dfu fu-util 0.8
+
+Step9: Unsolder bootpads
+
+Update the Kiss FC Gui https://chrome.google.com/webstore/de...
+
+That should be it :D Please like/sub if your like the tutorial.

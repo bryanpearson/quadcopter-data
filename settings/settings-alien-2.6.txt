@@ -109,13 +109,13 @@ set max_throttle = 2000
 
 # PID TUNING
 set pid_controller = MWREWRITE
-set p_pitch = 40
-set i_pitch = 26
-set d_pitch = 25
-set p_roll = 41
-set i_roll = 26
+set p_pitch = 37
+set i_pitch = 20 #26
+set d_pitch = 23
+set p_roll = 39
+set i_roll = 20 #26
 set d_roll = 24
-set p_yaw = 70
+set p_yaw = 72
 set i_yaw = 36
 set d_yaw = 0
 
