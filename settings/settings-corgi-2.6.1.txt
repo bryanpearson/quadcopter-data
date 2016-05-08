@@ -28,7 +28,7 @@ feature RX_SERIAL
 feature FAILSAFE
 feature TELEMETRY
 feature ONESHOT125
-
+feature BLACKBOX
 
 
 # RX SETUP
@@ -38,7 +38,7 @@ set serialrx_provider = SBUS
 
 # PORT SETUP (msp/uart/etc)
 serial 20 1 115200 57600 0 115200
-serial 0 0 115200 57600 0 250000
+serial 0 128 115200 57600 0 250000
 serial 1 64 115200 57600 0 115200
 serial 2 32 115200 57600 0 115200
 
@@ -59,9 +59,9 @@ set failsafe_delay = 10
 set failsafe_off_delay = 0
 
 
-set super_expo_factor = 20
+set super_expo_factor = 18
 set align_board_yaw = 90
-set blackbox_rate_denom = 4
+set vbat_pid_compensation = ON
 
 
 
@@ -69,22 +69,23 @@ set blackbox_rate_denom = 4
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1045
+set min_throttle = 1050
 set max_throttle = 2000
 
 
 
 # PID TUNING
 set pid_controller = MWREWRITE
-set p_pitch = 45
+set p_pitch = 47
 set i_pitch = 30
-set d_pitch = 18
-set p_roll = 45
+set d_pitch = 26
+set p_roll = 44
 set i_roll = 30
-set d_roll = 18
-set p_yaw = 90
-set i_yaw = 40
+set d_roll = 24
+set p_yaw = 82
+set i_yaw = 38
 set d_yaw = 0
+
 
 # STOCK 2.6.1 REWRITE PIDS
 # set p_pitch = 45
@@ -100,11 +101,11 @@ set d_yaw = 0
 
 set rc_rate = 100
 set rc_expo = 60
-set rc_yaw_expo = 20
+set rc_yaw_expo = 25
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 65
-set pitch_rate = 65
-set yaw_rate = 68
+set roll_rate = 75
+set pitch_rate = 75
+set yaw_rate = 110
 set tpa_rate = 0
 set tpa_breakpoint = 1500
