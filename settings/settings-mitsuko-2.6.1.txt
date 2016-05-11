@@ -1,8 +1,8 @@
 # Base settings, fresh firmware flash
-# BetaFlight 2.3 compatible
+# BetaFlight 2.6.1 compatible
 
 
-# FEATURE
+# feature
 feature -RX_PPM
 feature -VBAT
 feature -INFLIGHT_ACC_CAL
@@ -24,6 +24,7 @@ feature -DISPLAY
 feature -ONESHOT125
 feature -BLACKBOX
 feature -CHANNEL_FORWARDING
+feature -TRANSPONDER
 feature VBAT
 feature RX_SERIAL
 feature FAILSAFE
@@ -41,67 +42,66 @@ smix reset
 # CHANNEL MAP
 map TAER1234
 
-# enable 2kHz mode
-set gyro_lpf = OFF
+
+# serial
+serial 0 1 115200 57600 0 115200
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+
+# aux
+aux 0 0 0 950 1550
+aux 1 27 0 950 2050
+aux 2 28 0 950 2050
+aux 3 25 1 950 1050
 
 
 # RX / FAILSAFE
-set serialrx_provider = SBUS
-rxfail 0 h
-rxfail 1 h
-rxfail 2 h
-rxfail 3 h
 set failsafe_delay = 5
 set failsafe_off_delay = 0
+set failsafe_throttle = 1000
+set failsafe_kill_switch = OFF
+set failsafe_throttle_low_delay = 100
+set failsafe_procedure = ON
 
 
-# MAIN CONFIGS
-# set acc_hardware = 1 # OFF
-set baro_hardware = 1
-set mag_hardware = 1
-set blackbox_device=SPIFLASH
-set blackbox_rate_denom = 1
+
+# MAIN SETTINGS
+set super_expo_factor = 18
+set blackbox_rate_num = 1
+set blackbox_rate_denom = 4
+set blackbox_device = SPIFLASH
 
 
 # THROTTLE SETUP - AUX1
 set min_check = 1010
 set max_check = 1900
 set min_command = 1000
-set min_throttle = 1040
+set min_throttle = 1045
 set max_throttle = 2000
 
 
-# PIDS - 5" Alien
+# PIDS - 5" Mitsuko
 set pid_controller = MWREWRITE
-set p_pitch = 35
+set p_pitch = 45
 set i_pitch = 30
-set d_pitch = 14
-set p_roll = 32
+set d_pitch = 18
+set p_roll = 45
 set i_roll = 30
-set d_roll = 13
-set p_yaw = 75
+set d_roll = 18
+set p_yaw = 90
 set i_yaw = 40
-set d_yaw = 2
+set d_yaw = 0
 
-# STOCK REWRITE PIDS
-# set p_pitch = 50
-# set i_pitch = 30
-# set d_pitch = 20
-# set p_roll = 40
-# set i_roll = 30
-# set d_roll = 13
-# set p_yaw = 100
-# set i_yaw = 50
-# set d_yaw = 5
 
 # RATE PROFILES
 set rc_rate = 100
-set rc_expo = 70
-set rc_yaw_expo = 20
+set rc_expo = 60
+set rc_yaw_expo = 25
 set thr_mid = 50
 set thr_expo = 0
-set roll_rate = 75
-set pitch_rate = 77
+set roll_rate = 70
+set pitch_rate = 70
 set yaw_rate = 100
 set tpa_rate = 0
 set tpa_breakpoint = 1500
