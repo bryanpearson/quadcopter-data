@@ -68,6 +68,7 @@ set failsafe_procedure = ON
 
 # MAIN SETTINGS
 set super_expo_factor = 18
+set vbat_pid_compensation = ON
 set blackbox_rate_num = 1
 set blackbox_rate_denom = 4
 set blackbox_device = SPIFLASH
