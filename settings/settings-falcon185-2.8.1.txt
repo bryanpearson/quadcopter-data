@@ -85,6 +85,7 @@ set max_throttle = 2000
 
 
 # PID TUNING
+set pid_controller = MWREWRITE
 set p_pitch = 51
 set i_pitch = 40
 set d_pitch = 18
@@ -96,7 +97,7 @@ set i_yaw = 45
 set d_yaw = 20
 
 
-# STOCK REWRITE PIDS
+# STOCK LUX PIDS
 # set pid_controller = MWREWRITE
 # set p_pitch = 55
 # set i_pitch = 40
@@ -110,7 +111,7 @@ set d_yaw = 20
 
 
 # RATE PROFILES
-set rc_rate = 110
+set rc_rate = 103
 set rc_rate_yaw = 100
 set rc_expo = 0
 set rc_yaw_expo = 0
@@ -118,6 +119,6 @@ set thr_mid = 50
 set thr_expo = 0
 set roll_rate = 74
 set pitch_rate = 74
-set yaw_rate = 75
-set tpa_rate = 0
+set yaw_rate = 74
+set tpa_rate = 15
 set tpa_breakpoint = 1650
