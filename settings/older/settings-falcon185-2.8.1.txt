@@ -1,0 +1,124 @@
+# Base settings, fresh firmware flash
+# BetaFlight 2.8.0 compatible
+
+# feature
+feature -RX_PPM
+feature -VBAT
+feature -INFLIGHT_ACC_CAL
+feature -RX_SERIAL
+feature -MOTOR_STOP
+feature -SERVO_TILT
+feature -SOFTSERIAL
+feature -GPS
+feature -FAILSAFE
+feature -SONAR
+feature -TELEMETRY
+feature -CURRENT_METER
+feature -3D
+feature -RX_PARALLEL_PWM
+feature -RX_MSP
+feature -RSSI_ADC
+feature -LED_STRIP
+feature -DISPLAY
+feature -ONESHOT125
+feature -BLACKBOX
+feature -CHANNEL_FORWARDING
+feature -TRANSPONDER
+feature -AIRMODE
+feature -SUPEREXPO_RATES
+
+feature RX_SERIAL
+feature VBAT
+feature FAILSAFE
+feature TELEMETRY
+feature ONESHOT125
+feature BLACKBOX
+feature AIRMODE
+feature SUPEREXPO_RATES
+
+
+# RX SETUP
+map TAER1234
+set serialrx_provider = SBUS
+
+
+# PORT SETUP (msp/uart/etc)
+serial 20 1 115200 57600 0 115200
+serial 0 129 115200 57600 0 250000
+serial 1 64 115200 57600 0 115200
+serial 2 32 115200 57600 0 115200
+
+
+# FEATURE SETUP (arm)
+aux 0 0 0 950 1550
+
+
+# FAILSAFE
+rxfail 0 h
+rxfail 1 h
+rxfail 2 h
+rxfail 3 h
+rxfail 4 h
+rxfail 5 h
+rxfail 6 h
+set failsafe_delay = 10
+set failsafe_off_delay = 10
+set failsafe_procedure = ON
+
+
+###
+set vbat_pid_compensation = ON
+set fast_pwm_protocol = ONESHOT42
+
+
+# NOISE REDUCTION / FILTERING
+set gyro_lowpass = 90
+set dterm_lowpass = 100
+
+
+# THROTTLE SETUP - AUX1
+set min_check = 1010
+set max_check = 1900
+set min_command = 1000
+set min_throttle = 1057
+set max_throttle = 2000
+
+
+# PID TUNING
+set pid_controller = LUX
+set p_pitch = 56
+set i_pitch = 45
+set d_pitch = 19
+set p_roll = 56
+set i_roll = 45
+set d_roll = 19
+set p_yaw = 75
+set i_yaw = 45
+set d_yaw = 20
+
+
+# STOCK LUX PIDS
+# set pid_controller = MWREWRITE
+# set p_pitch = 55
+# set i_pitch = 40
+# set d_pitch = 15
+# set p_roll = 45
+# set i_roll = 40
+# set d_roll = 15
+# set p_yaw = 90
+# set i_yaw = 45
+# set d_yaw = 20
+
+
+# RATE PROFILES
+set rc_rate = 103
+set rc_rate_yaw = 100
+set rc_expo = 0
+set rc_yaw_expo = 0
+set thr_mid = 50
+set thr_expo = 0
+set roll_rate = 74
+set pitch_rate = 74
+set yaw_rate = 73
+set tpa_rate = 0
+set tpa_breakpoint = 1650

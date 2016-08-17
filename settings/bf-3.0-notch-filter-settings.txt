@@ -1,0 +1,9 @@
+set gyro_notch_hz = 180
+set gyro_notch_cutoff = 140
+
+set dterm_notch_hz = 180
+set dterm_notch_cutoff = 150
+
+set gyro_lowpass = 110
+set dterm_lowpass = 0
+set yaw_lowpass = 0

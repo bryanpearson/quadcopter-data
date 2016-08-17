@@ -1,9 +1,0 @@
-Voltage PID fix:
-14.8;15.5;16.8
-
-
-
-a_nub says:
-He uses TPA
-1.1;0.75;.2
-And .1 expo for ya
